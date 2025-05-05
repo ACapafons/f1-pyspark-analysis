@@ -38,10 +38,20 @@ pip install -r requirements.txt
 
 Coloca los siguientes archivos CSV dentro de la carpeta `/data`:
 
-- `results.csv`
-- `races.csv`
-- `drivers.csv`
 - `constructors.csv`
+- `drivers.csv`
+- `races.csv`
+- `results.csv`
+- `lap_times.csv`
+- `pit_stops.csv`
+- `qualifying.csv`
+- `seasons.csv`
+- `sprints_results.csv`
+- `status.csv`
+- `circuits.csv`
+- `contrusctor_results.csv`
+- `constructor_standings.csv`
+- `driver_standings.csv`
 
 ---
 
