@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 ## 📦 Dataset utilizado
 
-[F1 World Championship (1950 - 2020) - Kaggle](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020)
+[F1 World Championship (1950 - 2024) - Kaggle](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020)
 
 Coloca los siguientes archivos CSV dentro de la carpeta `/data`:
 
