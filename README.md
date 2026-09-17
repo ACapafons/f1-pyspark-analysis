@@ -1,91 +1,60 @@
 # 🏎️ Análisis de Fórmula 1 con PySpark
 
-Este proyecto aplica técnicas de procesamiento distribuido con PySpark para analizar datos históricos del Campeonato Mundial de Fórmula 1. Utiliza un conjunto de datos real extraído de Kaggle y permite realizar análisis por temporada, escudería, piloto y circuito.
+Proyecto personal para practicar procesamiento de datos con **PySpark** sobre información histórica de Fórmula 1. Parte de datos tabulares en CSV y construye análisis mediante joins, filtros y agregaciones con Spark SQL.
 
----
+No pretende ser una plataforma de datos de producción: es una pieza de aprendizaje práctica y reproducible para consolidar fundamentos de ingeniería de datos.
 
-## 📁 Estructura del proyecto
+## Qué analiza
 
-```
+- Resultados, carreras, pilotos y constructores.
+- Rankings de pilotos por puntos en una temporada.
+- Número de carreras disputadas por escudería.
+- Relaciones entre varias tablas mediante joins.
+
+## Tecnologías
+
+- Python
+- Apache Spark / PySpark
+- Spark SQL
+- CSV
+
+## Estructura
+
+```text
 f1-pyspark-analysis/
-├── data/              # Archivos CSV descargados desde Kaggle
-├── notebooks/         # (Opcional) Notebooks para pruebas
-├── scripts/           # Scripts en PySpark para análisis
-├── README.md          # Este archivo
-└── requirements.txt   # Dependencias del entorno
+├── data/                     # Dataset de F1 en CSV
+├── scripts/
+│   ├── analisis_inicial.py   # Carga y exploración básica
+│   └── analisis_avanzado.py # Joins, filtros y agregaciones
+├── requirements.txt
+└── README.md
 ```
 
----
+## Dataset
 
-## 🔧 Requisitos
+El proyecto utiliza el dataset público [Formula 1 World Championship](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020) de Kaggle.
 
-- Python 3.8+
-- Apache Spark
-- PySpark
-- pandas (para postprocesamiento)
+Para ejecutar los scripts, descarga los CSV y colócalos en `data/`. El análisis avanzado necesita, como mínimo:
 
-Instala las dependencias con:
+- `results.csv`
+- `races.csv`
+- `drivers.csv`
+- `constructors.csv`
+
+## Ejecución
+
+Desde la raíz del repositorio:
 
 ```bash
 pip install -r requirements.txt
+cd scripts
+python analisis_avanzado.py
 ```
 
----
+## Objetivo de aprendizaje
 
-## 📦 Dataset utilizado
+Este repositorio refleja una fase inicial de mi transición desde sistemas e integración hacia datos. Los siguientes pasos previstos son tipar el esquema de entrada, tratar calidad de datos de forma explícita y guardar salidas analíticas en formatos más adecuados para procesamiento, como Parquet.
 
-[F1 World Championship (1950 - 2024) - Kaggle](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020)
+## Otro proyecto relacionado
 
-Coloca los siguientes archivos CSV dentro de la carpeta `/data`:
-
-- `constructors.csv`
-- `drivers.csv`
-- `races.csv`
-- `results.csv`
-- `lap_times.csv`
-- `pit_stops.csv`
-- `qualifying.csv`
-- `seasons.csv`
-- `sprints_results.csv`
-- `status.csv`
-- `circuits.csv`
-- `contrusctor_results.csv`
-- `constructor_standings.csv`
-- `driver_standings.csv`
-
----
-
-## 🚀 Scripts incluidos
-
-### 🔹 `analisis_inicial.py`
-Carga y visualiza los datos base:
-- Muestra columnas y registros del dataset.
-- Agrupa resultados por escudería.
-
-### 🔹 `analisis_avanzado.py`
-Análisis detallado:
-- Joins entre múltiples tablas (races, drivers, constructors, results).
-- Filtrado por temporada.
-- Ranking de pilotos por puntos en un año.
-- Carreras disputadas por escudería.
-
----
-
-## 🎯 Objetivos del proyecto
-
-- Practicar el uso de PySpark y Spark SQL.
-- Entender cómo trabajar con grandes volúmenes de datos estructurados.
-- Aplicar análisis de datos a un tema apasionante como la F1.
-
----
-
-## 🤝 Contribuciones
-
-Este proyecto es personal y está en evolución. Se aceptan ideas, mejoras o pull requests.
-
----
-
-## 📬 Contacto
-
-Creado por **Agustín Jesús Capafons Pérez**  
-📧 [ajcapafonsp@gmail.com](mailto:ajcapafonsp@gmail.com)
+- [Analizador de Vueltas](https://github.com/ACapafons/AnalizadorVueltas): análisis de sesiones de clasificación y telemetría básica con Python.
